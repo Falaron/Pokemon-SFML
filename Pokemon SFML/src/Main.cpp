@@ -13,6 +13,14 @@ int main()
     /* Create Window */
     sf::RenderWindow window(sf::VideoMode(800, 600), "Pokemon SFML", (sf::Style::Titlebar, sf::Style::Close));
     window.setFramerateLimit(30);
+
+    /* Create Texture */
+    sf::Texture texture;
+    if (!texture.loadFromFile("sprites/image.png")) {}
+    sf::Sprite sprite;
+    sprite.setTexture(texture);
+    sprite.setTextureRect(sf::IntRect(0, 0, 32, 32));
+    sprite.setScale(sf::Vector2f(4, 4));
    
 
     while (window.isOpen())
@@ -29,6 +37,8 @@ int main()
         
         window.clear();
         //Place graphic actions here :)
+        window.draw(sprite);
+
         window.display();
     }
 
