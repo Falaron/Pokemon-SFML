@@ -4,8 +4,9 @@
 class Player {
 public:
 	void Input();
+	void PrintPlayer(const std::string& tileset);
 private:
-	int positionX;
-	int positionY;
-	int speed;
+	int positionX = 0;
+	int positionY = 0;
+	int speed = 5;
 };
