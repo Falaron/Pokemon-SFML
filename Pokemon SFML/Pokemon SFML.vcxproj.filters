@@ -18,9 +18,12 @@
     <ClCompile Include="src\Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="headers\Header.hpp">
+    <ClInclude Include="headers\Player.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
