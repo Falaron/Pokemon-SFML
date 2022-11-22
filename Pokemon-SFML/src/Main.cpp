@@ -4,31 +4,31 @@
 # include "../headers/Player.hpp"
 
 
-
+using namespace sf;
 
 int main()
 {
     Player player;
 
     /* Create Window */
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Pokemon SFML", (sf::Style::Titlebar, sf::Style::Close));
+    RenderWindow window(VideoMode(800, 600), "Pokemon SFML", (Style::Titlebar, Style::Close));
     window.setFramerateLimit(30);
 
     /* Create Texture */
-    sf::Texture texture;
-    if (!texture.loadFromFile("sprites/image.png")) {}
-    sf::Sprite sprite;
+    Texture texture;
+    if (!texture.loadFromFile("./sprites/image.png")) {}
+    Sprite sprite;
     sprite.setTexture(texture);
-    sprite.setTextureRect(sf::IntRect(0, 0, 32, 32));
-    sprite.setScale(sf::Vector2f(4, 4));
+    sprite.setTextureRect(IntRect(0, 0, 32, 32));
+    sprite.setScale(Vector2f(4, 4));
    
 
     while (window.isOpen())
     {
-        sf::Event event;
+        Event event;
         while (window.pollEvent(event))
         {
-            if (event.type == sf::Event::Closed || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+            if (event.type == Event::Closed || Keyboard::isKeyPressed(Keyboard::Escape))
                 window.close();
         }
 
